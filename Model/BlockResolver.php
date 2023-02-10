@@ -10,6 +10,7 @@ namespace Kazetenn\Core\Model;
 
 use Doctrine\Persistence\ManagerRegistry;
 use Exception;
+use Kazetenn\Core\Entity\BaseBlockInterface;
 use Kazetenn\Core\Entity\BaseContentInterface;
 use Kazetenn\Core\Service\ContentService;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
@@ -18,7 +19,7 @@ use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 
 #[AutoconfigureTag('controller.argument_value_resolver', ['priority' => 150])]
-class ContentResolver implements ValueResolverInterface
+class BlockResolver implements ValueResolverInterface
 {
     public function __construct(protected ManagerRegistry $managerRegistry, protected ContentService $contentService)
     {
@@ -36,16 +37,17 @@ class ContentResolver implements ValueResolverInterface
     // Vérifie le type attendu par le contrôleur
     private function supports(ArgumentMetadata $argument): bool
     {
-        return $argument->getType() === BaseContentInterface::class;
+        return $argument->getType() === BaseBlockInterface::class;
     }
 
     private function apply(Request $request): array
     {
-        $id = $request->attributes->get('content');
+        $blockId = $request->attributes->get('content');
+        $id = $request->attributes->get('baseBlock');
 
         if(null !== $id) {
             try {
-                return [$this->contentService->getContentById($id)];
+                return [$this->contentService->getBlockById($blockId, $id)];
             }catch (Exception){
                 return [];
             }

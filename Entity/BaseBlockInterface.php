@@ -12,6 +12,9 @@ use Symfony\Component\Uid\UuidV4;
 
 interface BaseBlockInterface
 {
+    const HORIZONTAL_ALIGN = 'horizontal';
+    const VERTICAL_ALIGN   = 'vertical';
+
     public function addChildren(BaseBlock $baseBlock): self;
 
     public function removeChildren(BaseBlock $baseBlock): self;
@@ -22,7 +25,7 @@ interface BaseBlockInterface
 
     public function getBaseContent(): ?BaseContent;
 
-    public function setBaseContent(?BaseContent $baseContent): void;
+    public function setBaseContent(?BaseContentInterface $baseContent): void;
 
     public function getParent(): ?BaseBlockInterface;
 

@@ -2,16 +2,12 @@
 
 namespace Kazetenn\Core\Form;
 
-use Kazetenn\Pages\Entity\Page;
-use Kazetenn\Pages\Entity\PageContent;
-use Kazetenn\Pages\Repository\PageContentRepository;
+use Kazetenn\Core\Entity\BaseBlockInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ContentBlockType extends AbstractType
 {
@@ -31,8 +27,8 @@ class ContentBlockType extends AbstractType
             ])
             ->add('align', ChoiceType::class, [
                 'choices' => [
-                    PageContent::HORIZONTAL_ALIGN => 'horizontal',
-                    PageContent::VERTICAL_ALIGN   => 'vertical'
+                    BaseBlockInterface::HORIZONTAL_ALIGN => 'horizontal',
+                    BaseBlockInterface::VERTICAL_ALIGN   => 'vertical'
                 ],
                 'label'   => 'align.label',
                 'attr' =>[

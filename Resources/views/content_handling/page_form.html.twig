@@ -1,4 +1,5 @@
 {% extends '@KazetennAdmin/admin_base.html.twig' %}
+{% trans_default_domain 'kazetenn_admin' %}
 
 {% block title %}New content{% endblock %}
 
@@ -15,13 +16,13 @@
 {% block body %}
     {{ form_start(form) }}
 
-    <h3 class="subtitle">page information</h3>
+    <h3 class="subtitle">{{ 'kazetenn_admin.content_form.title'|trans }}</h3>
     <div class="columns">
         <div class="column">{{ form_row(form.title) }}</div>
         <div class="column">{{ form_row(form.slug) }}</div>
 
-        {% block content_custom_form  %}
-        {% endblock  %}
+        {% block content_custom_form %}
+        {% endblock %}
     </div>
 
     {% if form.content_type is defined %}
@@ -31,9 +32,9 @@
     {% endif %}
 
     {% if form.blocks is defined %}
-        {% set page_id = form.vars.data.id %}
+        {% set content_id = form.vars.data.id %}
 
-        <h3 class="subtitle">page content</h3>
+        <h3 class="subtitle">{{ 'kazetenn_admin.block_form.title'|trans }}</h3>
         <div>
             {% set rendered_blocks = [] %}
             {% set page_order = 0 %}
@@ -42,7 +43,6 @@
                 {% if block_id not in rendered_blocks and block_form.vars.data.parent is null %}
                     <div class="columns">
                         <div class="column is-10">
-                            {% dump block_form.content.vars.id ~ '_header' %}
                             <div id="{{ block_form.content.vars.id ~ '_header' }}" class="block_text_area_toolbar"></div>
                             {{ form_row(block_form.content) }}
                         </div>
@@ -82,7 +82,7 @@
                             {% endfor %}
                         {% endif %}
 
-                        <a href="{{ path('kazetenn_admin_page_add_content', {'page': page_id, 'parent': block_id, 'higherOrder': max_order}) }}" type="button">add</a>
+                        <a href="{{ path('kazetenn_admin_content_add_block', {'content': content_id, 'baseBlock': block_id, 'higherOrder': max_order}) }}" type="button">{{ 'kazetenn_admin.add_content.label'|trans }}</a>
                     </div>
 
                 {% endif %}
@@ -91,12 +91,12 @@
                     {% set page_order = block_form.vars.data.blocOrder %}
                 {% endif %}
             {% endfor %}
-            <a href="{{ path('kazetenn_admin_page_add_content', {'page': page_id, 'parent': null, 'higherOrder': page_order}) }}" type="button">add</a>
+            <a href="{{ path('kazetenn_admin_content_add_block', {'content': content_id, 'baseBlock': null, 'higherOrder': page_order}) }}" type="button">{{ 'kazetenn_admin.add_content.label'|trans }}</a>
         </div>
         {% do form.blocks.setRendered %}
     {% endif %}
     <div>
-        <button type="submit" class="button">{{ 'page_content.save_button.label'|trans }}</button>
+        <button type="submit" class="button">{{ 'kazetenn_admin.content_form.button_label'|trans }}</button>
     </div>
 
     {{ form_end(form) }}

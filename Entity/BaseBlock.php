@@ -21,8 +21,6 @@ use Symfony\Component\Uid\UuidV4;
 abstract class BaseBlock implements BaseBlockInterface
 {
     const ROW_TEMPLATE     = '@Core/content/_block_content_display.twig';
-    const HORIZONTAL_ALIGN = 'horizontal';
-    const VERTICAL_ALIGN   = 'vertical';
 
     use TimestampableEntity;
     use BlameableEntity;
@@ -100,7 +98,7 @@ abstract class BaseBlock implements BaseBlockInterface
         return $this->baseContent;
     }
 
-    public function setBaseContent(?BaseContent $baseContent): void
+    public function setBaseContent(?BaseContentInterface $baseContent): void
     {
         $this->baseContent = $baseContent;
     }

@@ -9,17 +9,15 @@
 namespace Kazetenn\Core\EventListener;
 
 use DateTime;
-use Kazetenn\Articles\Entity\Article;
-use Kazetenn\Pages\Entity\Page;
+use Kazetenn\Core\Entity\BaseBlockInterface;
 use Doctrine\Persistence\Event\LifecycleEventArgs;
-use Kazetenn\Pages\Entity\PageContent;
 
 class TimestampableListener
 {
     public function prePersist(LifecycleEventArgs $args): void
     {
         $entity = $args->getObject();
-        if (!$entity instanceof Page and  !$entity instanceof Article and !$entity instanceof PageContent) {
+        if (!$entity instanceof BaseBlockInterface) {
             return;
         }
 
