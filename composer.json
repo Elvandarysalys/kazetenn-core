@@ -1,5 +1,5 @@
 {
-  "name": "elvandar/kazetenn_core",
+  "name": "elvandar/kazetenn-core",
   "type": "symfony-bundle",
   "license": "GPL-3.0-or-later",
   "description": "CSM library for symfony",
