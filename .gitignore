@@ -12,6 +12,14 @@
 /public/bundles/
 /var/
 /vendor/
+src/*
+templates/*
+public/*
+bin/*
+config/*
+assets/*
+tests/*
+migrations/*
 ###< symfony/framework-bundle ###
 
 ###> symfony/webpack-encore-bundle ###
