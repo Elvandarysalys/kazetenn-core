@@ -1,4 +1,5 @@
 {% extends '@KazetennAdmin/admin_base.html.twig' %}
+{% trans_default_domain 'kazetenn_admin' %}
 
 {% block title %}New content{% endblock %}
 
@@ -15,7 +16,7 @@
 {% block body %}
     {{ form_start(form) }}
 
-    <h3 class="subtitle">page information</h3>
+    <h3 class="subtitle">{{ 'kazetenn_admin.content_form.title'|trans }}</h3>
     <div class="columns">
         <div class="column">{{ form_row(form.title) }}</div>
         <div class="column">{{ form_row(form.slug) }}</div>
