@@ -4,7 +4,6 @@ namespace Kazetenn\Core\DependencyInjection;
 
 use Exception;
 use Kazetenn\Admin\Model\AdminMenu;
-use Kazetenn\Pages\KazetennPages;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;

@@ -13,13 +13,14 @@
   "prefer-stable": true,
   "require": {
     "php": "8.1.*",
+    "ext-json": "*",
     "composer/package-versions-deprecated": "1.11.99.4",
     "doctrine/annotations": "1.13.*",
     "doctrine/doctrine-bundle": "2.7.*",
     "doctrine/doctrine-migrations-bundle": "3.2.*",
     "doctrine/orm": "2.12.*",
+    "elvandar/kazetenn-admin": "^1.2",
     "phpdocumentor/reflection-docblock": ">=5.2",
-    "sensio/framework-extra-bundle": ">=6.2",
     "stof/doctrine-extensions-bundle": ">=1.7",
     "symfony/asset": "6.2.*",
     "symfony/console": "6.2.*",
@@ -49,8 +50,7 @@
     "symfony/web-link": "6.2.*",
     "symfony/yaml": "6.2.*",
     "twig/extra-bundle": "3.4.*",
-    "twig/twig": "3.4.*",
-    "ext-json": "*"
+    "twig/twig": "3.4.*"
   },
   "require-dev": {
     "icanhazstring/composer-unused": ">=0.8.1",
@@ -64,11 +64,6 @@
     "symfony/stopwatch": "6.2.*",
     "symfony/web-profiler-bundle": "6.2.*",
     "symfony/webpack-encore-bundle": ">=1.13"
-  },
-  "replace": {
-    "elvandar/kazetenn_pages": "0.0.1",
-    "elvandar/kazetenn_articles": "0.0.1",
-    "elvandar/kazetenn_core_admin": "self.version"
   },
   "config": {
     "optimize-autoloader": true,
