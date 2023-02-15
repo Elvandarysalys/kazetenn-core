@@ -12,14 +12,13 @@
 /public/bundles/
 /var/
 /vendor/
-src/*
-templates/*
-public/*
 bin/*
-config/*
-assets/*
 tests/*
 migrations/*
+src/Kernel.php
+
+config/*
+!config/routes.yaml
 ###< symfony/framework-bundle ###
 
 ###> symfony/webpack-encore-bundle ###

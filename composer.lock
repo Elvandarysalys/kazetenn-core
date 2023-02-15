@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2663dc84612aec0a8ba583a79cb40ef4",
+    "content-hash": "6bac916829605af33ef2c58764bf2ae3",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1558,16 +1558,16 @@
         },
         {
             "name": "elvandar/kazetenn-admin",
-            "version": "1.2",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Elvandarysalys/kazetenn-admin.git",
-                "reference": "adc7cf14db274e00fd370aa9567d918df86f44a7"
+                "reference": "b47778d349a5942e2ac61d0b6e47b0db8abc1555"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-admin/zipball/adc7cf14db274e00fd370aa9567d918df86f44a7",
-                "reference": "adc7cf14db274e00fd370aa9567d918df86f44a7",
+                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-admin/zipball/b47778d349a5942e2ac61d0b6e47b0db8abc1555",
+                "reference": "b47778d349a5942e2ac61d0b6e47b0db8abc1555",
                 "shasum": ""
             },
             "require": {
@@ -1580,6 +1580,7 @@
                 "phpdocumentor/reflection-docblock": ">=5.2",
                 "stof/doctrine-extensions-bundle": ">=1.7",
                 "symfony/asset": "6.2.*",
+                "symfony/config": "6.2.*",
                 "symfony/console": "6.2.*",
                 "symfony/dotenv": "6.2.*",
                 "symfony/expression-language": "6.2.*",
@@ -1623,9 +1624,15 @@
                 "symfony/webpack-encore-bundle": "^1.13"
             },
             "type": "symfony-bundle",
+            "extra": {
+                "symfony": {
+                    "docker": true,
+                    "allow-contrib": true
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "Kazetenn\\Admin\\": ""
+                    "Kazetenn\\Admin\\": "src"
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
@@ -1644,9 +1651,108 @@
             "description": "A symfon administration builder library built for the kazetenn project",
             "support": {
                 "issues": "https://github.com/Elvandarysalys/kazetenn-admin/issues",
-                "source": "https://github.com/Elvandarysalys/kazetenn-admin/tree/1.2"
+                "source": "https://github.com/Elvandarysalys/kazetenn-admin/tree/1.0"
             },
-            "time": "2023-02-10T09:07:14+00:00"
+            "time": "2023-02-15T14:29:11+00:00"
+        },
+        {
+            "name": "elvandar/kazetenn-users",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Elvandarysalys/kazetenn-users.git",
+                "reference": "d745656cb974a714b77c239109e9c783fbe4c04f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-users/zipball/d745656cb974a714b77c239109e9c783fbe4c04f",
+                "reference": "d745656cb974a714b77c239109e9c783fbe4c04f",
+                "shasum": ""
+            },
+            "require": {
+                "composer/package-versions-deprecated": "1.11.99.4",
+                "doctrine/annotations": "1.13.*",
+                "doctrine/doctrine-bundle": "2.7.*",
+                "doctrine/doctrine-migrations-bundle": "3.2.*",
+                "doctrine/orm": "2.12.*",
+                "php": "8.1.*",
+                "phpdocumentor/reflection-docblock": ">=5.2",
+                "stof/doctrine-extensions-bundle": ">=1.7",
+                "symfony/asset": "6.2.*",
+                "symfony/console": "6.2.*",
+                "symfony/dotenv": "6.2.*",
+                "symfony/expression-language": "6.2.*",
+                "symfony/flex": "2.2.*",
+                "symfony/form": "6.2.*",
+                "symfony/framework-bundle": "6.2.*",
+                "symfony/http-client": "6.2.*",
+                "symfony/intl": "6.2.*",
+                "symfony/mailer": "6.2.*",
+                "symfony/mime": "6.2.*",
+                "symfony/monolog-bundle": "3.*",
+                "symfony/notifier": "6.2.*",
+                "symfony/process": "6.2.*",
+                "symfony/property-access": "6.2.*",
+                "symfony/property-info": "6.2.*",
+                "symfony/proxy-manager-bridge": "6.2.*",
+                "symfony/runtime": "6.2.*",
+                "symfony/security-bundle": "6.2.*",
+                "symfony/serializer": "6.2.*",
+                "symfony/string": "6.2.*",
+                "symfony/translation": "6.2.*",
+                "symfony/twig-bundle": "6.2.*",
+                "symfony/uid": "6.2.*",
+                "symfony/validator": "6.2.*",
+                "symfony/web-link": "6.2.*",
+                "symfony/yaml": "6.2.*",
+                "symfonycasts/verify-email-bundle": "^1.13",
+                "twig/extra-bundle": "3.4.*",
+                "twig/twig": "3.4.*"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.8",
+                "phpunit/phpunit": "^9.5",
+                "rector/rector": "^0.12.23",
+                "symfony/browser-kit": "6.*",
+                "symfony/css-selector": "6.*",
+                "symfony/debug-bundle": "6.*",
+                "symfony/maker-bundle": "^1.0",
+                "symfony/phpunit-bridge": "^6.0",
+                "symfony/stopwatch": "6.*",
+                "symfony/web-profiler-bundle": "6.*",
+                "symfony/webpack-encore-bundle": "^1.13"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "symfony": {
+                    "docker": true,
+                    "allow-contrib": true
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kazetenn\\Users\\": "src"
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elvandar Ysalys",
+                    "email": "elvandar.ysalys@protonmail.com"
+                }
+            ],
+            "description": "A symfony library to handle users in the kazetenn project",
+            "support": {
+                "issues": "https://github.com/Elvandarysalys/kazetenn-users/issues",
+                "source": "https://github.com/Elvandarysalys/kazetenn-users/tree/1.0.1"
+            },
+            "time": "2023-02-15T14:44:01+00:00"
         },
         {
             "name": "friendsofphp/proxy-manager-lts",
@@ -7761,6 +7867,53 @@
             "time": "2023-01-10T18:53:53+00:00"
         },
         {
+            "name": "symfonycasts/verify-email-bundle",
+            "version": "v1.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SymfonyCasts/verify-email-bundle.git",
+                "reference": "eb7bc997f36ad872a0d56bf209fe37fed148b0a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SymfonyCasts/verify-email-bundle/zipball/eb7bc997f36ad872a0d56bf209fe37fed148b0a7",
+                "reference": "eb7bc997f36ad872a0d56bf209fe37fed148b0a7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.2.5",
+                "symfony/config": "^5.4 | ^6.0",
+                "symfony/dependency-injection": "^5.4 | ^6.0",
+                "symfony/deprecation-contracts": "^2.2 | ^3.0",
+                "symfony/http-kernel": "^5.4 | ^6.0",
+                "symfony/routing": "^5.4 | ^6.0"
+            },
+            "require-dev": {
+                "doctrine/orm": "^2.7",
+                "doctrine/persistence": "^2.0",
+                "symfony/framework-bundle": "^5.4 | ^6.0",
+                "symfony/phpunit-bridge": "^5.4 | ^6.0",
+                "vimeo/psalm": "^4.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "SymfonyCasts\\Bundle\\VerifyEmail\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple, stylish Email Verification for Symfony",
+            "support": {
+                "issues": "https://github.com/SymfonyCasts/verify-email-bundle/issues",
+                "source": "https://github.com/SymfonyCasts/verify-email-bundle/tree/v1.13.0"
+            },
+            "time": "2023-01-04T12:46:15+00:00"
+        },
+        {
             "name": "twig/extra-bundle",
             "version": "v3.4.0",
             "source": {
@@ -8734,16 +8887,16 @@
         },
         {
             "name": "phpunit/php-file-iterator",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "7d66d4e816d34e90acec9db9d8d94b5cfbfe926f"
+                "reference": "fd9329ab3368f59fe1fe808a189c51086bd4b6bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/7d66d4e816d34e90acec9db9d8d94b5cfbfe926f",
-                "reference": "7d66d4e816d34e90acec9db9d8d94b5cfbfe926f",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/fd9329ab3368f59fe1fe808a189c51086bd4b6bd",
+                "reference": "fd9329ab3368f59fe1fe808a189c51086bd4b6bd",
                 "shasum": ""
             },
             "require": {
@@ -8782,7 +8935,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-file-iterator/issues",
-                "source": "https://github.com/sebastianbergmann/php-file-iterator/tree/4.0.0"
+                "source": "https://github.com/sebastianbergmann/php-file-iterator/tree/4.0.1"
             },
             "funding": [
                 {
@@ -8790,7 +8943,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-03T06:55:11+00:00"
+            "time": "2023-02-10T16:53:14+00:00"
         },
         {
             "name": "phpunit/php-invoker",

@@ -19,7 +19,8 @@
     "doctrine/doctrine-bundle": "2.7.*",
     "doctrine/doctrine-migrations-bundle": "3.2.*",
     "doctrine/orm": "2.12.*",
-    "elvandar/kazetenn-admin": "^1.2",
+    "elvandar/kazetenn-admin": "^1.0",
+    "elvandar/kazetenn-users": "^1.0",
     "phpdocumentor/reflection-docblock": ">=5.2",
     "stof/doctrine-extensions-bundle": ">=1.7",
     "symfony/asset": "6.2.*",
@@ -77,7 +78,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Kazetenn\\Core\\": ""
+      "Kazetenn\\Core\\": "src/"
     }
   },
   "scripts": {
