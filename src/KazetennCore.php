@@ -3,6 +3,7 @@
 namespace Kazetenn\Core;
 
 use Kazetenn\Admin\Model\AdminMenu;
+use Kazetenn\Users\KazetennUsers;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
@@ -23,7 +24,11 @@ class KazetennCore extends AbstractBundle
             ]
         ]);
 
-        $admin_config[AdminMenu::MENU_AUTHORIZED_ROLES] = ['ROLE_USER'];
+        $builder->prependExtensionConfig('kazetenn_users', [
+            'redirect_to_route' => 'admin_index'
+        ]);
+
+        $admin_config[AdminMenu::MENU_AUTHORIZED_ROLES] = [KazetennUsers::ROLE_REDACTION];
 
         // tests for horizontal menus
         $admin_config[AdminMenu::MENU_ENTRIES_NAME] = [

@@ -1,7 +1,7 @@
 {
   "name": "elvandar/kazetenn-core",
   "type": "symfony-bundle",
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "description": "CSM library for symfony",
   "authors": [
     {
@@ -19,8 +19,8 @@
     "doctrine/doctrine-bundle": "2.7.*",
     "doctrine/doctrine-migrations-bundle": "3.2.*",
     "doctrine/orm": "2.12.*",
-    "elvandar/kazetenn-admin": "^1.0",
-    "elvandar/kazetenn-users": "^1.0",
+    "elvandar/kazetenn-admin": "^1.0.2",
+    "elvandar/kazetenn-users": "^1.0.3",
     "phpdocumentor/reflection-docblock": ">=5.2",
     "stof/doctrine-extensions-bundle": ">=1.7",
     "symfony/asset": "6.2.*",

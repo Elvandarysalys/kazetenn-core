@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6bac916829605af33ef2c58764bf2ae3",
+    "content-hash": "4dc986b8931455de2091845472b93a95",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1140,16 +1140,16 @@
         },
         {
             "name": "doctrine/migrations",
-            "version": "3.5.5",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/migrations.git",
-                "reference": "4b1e2b6ba71d21d0c5be22ed03b6fc954d20b204"
+                "reference": "e542ad8bcd606d7a18d0875babb8a6d963c9c059"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/4b1e2b6ba71d21d0c5be22ed03b6fc954d20b204",
-                "reference": "4b1e2b6ba71d21d0c5be22ed03b6fc954d20b204",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/e542ad8bcd606d7a18d0875babb8a6d963c9c059",
+                "reference": "e542ad8bcd606d7a18d0875babb8a6d963c9c059",
                 "shasum": ""
             },
             "require": {
@@ -1157,11 +1157,11 @@
                 "doctrine/dbal": "^3.5.1",
                 "doctrine/deprecations": "^0.5.3 || ^1",
                 "doctrine/event-manager": "^1.2 || ^2.0",
-                "friendsofphp/proxy-manager-lts": "^1.0",
-                "php": "^7.4 || ^8.0",
+                "php": "^8.1",
                 "psr/log": "^1.1.3 || ^2 || ^3",
                 "symfony/console": "^4.4.16 || ^5.4 || ^6.0",
-                "symfony/stopwatch": "^4.4 || ^5.4 || ^6.0"
+                "symfony/stopwatch": "^4.4 || ^5.4 || ^6.0",
+                "symfony/var-exporter": "^6.2"
             },
             "conflict": {
                 "doctrine/orm": "<2.12"
@@ -1177,7 +1177,7 @@
                 "phpstan/phpstan-phpunit": "^1.1",
                 "phpstan/phpstan-strict-rules": "^1.1",
                 "phpstan/phpstan-symfony": "^1.1",
-                "phpunit/phpunit": "^9.5",
+                "phpunit/phpunit": "^9.5.24",
                 "symfony/cache": "^4.4 || ^5.4 || ^6.0",
                 "symfony/process": "^4.4 || ^5.4 || ^6.0",
                 "symfony/yaml": "^4.4 || ^5.4 || ^6.0"
@@ -1222,7 +1222,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/migrations/issues",
-                "source": "https://github.com/doctrine/migrations/tree/3.5.5"
+                "source": "https://github.com/doctrine/migrations/tree/3.6.0"
             },
             "funding": [
                 {
@@ -1238,7 +1238,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-18T12:44:30+00:00"
+            "time": "2023-02-15T18:49:46+00:00"
         },
         {
             "name": "doctrine/orm",
@@ -1558,16 +1558,16 @@
         },
         {
             "name": "elvandar/kazetenn-admin",
-            "version": "1.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Elvandarysalys/kazetenn-admin.git",
-                "reference": "b47778d349a5942e2ac61d0b6e47b0db8abc1555"
+                "reference": "ba24f0a1d93a4f2430b305b4dae0c369195299ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-admin/zipball/b47778d349a5942e2ac61d0b6e47b0db8abc1555",
-                "reference": "b47778d349a5942e2ac61d0b6e47b0db8abc1555",
+                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-admin/zipball/ba24f0a1d93a4f2430b305b4dae0c369195299ac",
+                "reference": "ba24f0a1d93a4f2430b305b4dae0c369195299ac",
                 "shasum": ""
             },
             "require": {
@@ -1627,7 +1627,11 @@
             "extra": {
                 "symfony": {
                     "docker": true,
-                    "allow-contrib": true
+                    "allow-contrib": true,
+                    "endpoint": [
+                        "https://api.github.com/repos/Elvandarysalys/recipes/contents/index.json",
+                        "flex://defaults"
+                    ]
                 }
             },
             "autoload": {
@@ -1651,22 +1655,22 @@
             "description": "A symfon administration builder library built for the kazetenn project",
             "support": {
                 "issues": "https://github.com/Elvandarysalys/kazetenn-admin/issues",
-                "source": "https://github.com/Elvandarysalys/kazetenn-admin/tree/1.0"
+                "source": "https://github.com/Elvandarysalys/kazetenn-admin/tree/1.0.2"
             },
-            "time": "2023-02-15T14:29:11+00:00"
+            "time": "2023-02-16T10:06:37+00:00"
         },
         {
             "name": "elvandar/kazetenn-users",
-            "version": "1.0.1",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Elvandarysalys/kazetenn-users.git",
-                "reference": "d745656cb974a714b77c239109e9c783fbe4c04f"
+                "reference": "ca8acfe9597cbab8bd2704bf76bb4e96caa0badb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-users/zipball/d745656cb974a714b77c239109e9c783fbe4c04f",
-                "reference": "d745656cb974a714b77c239109e9c783fbe4c04f",
+                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-users/zipball/ca8acfe9597cbab8bd2704bf76bb4e96caa0badb",
+                "reference": "ca8acfe9597cbab8bd2704bf76bb4e96caa0badb",
                 "shasum": ""
             },
             "require": {
@@ -1726,7 +1730,11 @@
             "extra": {
                 "symfony": {
                     "docker": true,
-                    "allow-contrib": true
+                    "allow-contrib": true,
+                    "endpoint": [
+                        "https://api.github.com/repos/Elvandarysalys/recipes/contents/index.json",
+                        "flex://defaults"
+                    ]
                 }
             },
             "autoload": {
@@ -1750,9 +1758,9 @@
             "description": "A symfony library to handle users in the kazetenn project",
             "support": {
                 "issues": "https://github.com/Elvandarysalys/kazetenn-users/issues",
-                "source": "https://github.com/Elvandarysalys/kazetenn-users/tree/1.0.1"
+                "source": "https://github.com/Elvandarysalys/kazetenn-users/tree/1.0.3"
             },
-            "time": "2023-02-15T14:44:01+00:00"
+            "time": "2023-02-16T09:42:51+00:00"
         },
         {
             "name": "friendsofphp/proxy-manager-lts",
