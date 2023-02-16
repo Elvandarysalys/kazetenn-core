@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4dc986b8931455de2091845472b93a95",
+    "content-hash": "611287b98067478eaf36c0c1c0ec7402",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1661,16 +1661,16 @@
         },
         {
             "name": "elvandar/kazetenn-users",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Elvandarysalys/kazetenn-users.git",
-                "reference": "ca8acfe9597cbab8bd2704bf76bb4e96caa0badb"
+                "reference": "f48c825a2595d560e96e54df02dfe9baace5c955"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-users/zipball/ca8acfe9597cbab8bd2704bf76bb4e96caa0badb",
-                "reference": "ca8acfe9597cbab8bd2704bf76bb4e96caa0badb",
+                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-users/zipball/f48c825a2595d560e96e54df02dfe9baace5c955",
+                "reference": "f48c825a2595d560e96e54df02dfe9baace5c955",
                 "shasum": ""
             },
             "require": {
@@ -1758,9 +1758,9 @@
             "description": "A symfony library to handle users in the kazetenn project",
             "support": {
                 "issues": "https://github.com/Elvandarysalys/kazetenn-users/issues",
-                "source": "https://github.com/Elvandarysalys/kazetenn-users/tree/1.0.3"
+                "source": "https://github.com/Elvandarysalys/kazetenn-users/tree/1.0.4"
             },
-            "time": "2023-02-16T09:42:51+00:00"
+            "time": "2023-02-16T10:30:45+00:00"
         },
         {
             "name": "friendsofphp/proxy-manager-lts",
