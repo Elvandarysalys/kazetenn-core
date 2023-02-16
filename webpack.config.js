@@ -5,16 +5,16 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 }
 
 Encore
-  .setOutputPath('Resources/public/')
+  .setOutputPath('public/')
   .setPublicPath('/')
-  .setManifestKeyPrefix('bundles/kazetenn')
+  .setManifestKeyPrefix('bundles/kazetenncore')
   .enableSourceMaps(false)
   .enableVersioning(false)
   .disableSingleRuntimeChunk()
   .enableSassLoader()
 
   /* entries */
-  .addEntry('admin_page_form', '/Resources/assets/js/content_form.js')
+  .addEntry('admin_page_form', '/assets/js/content_form.js')
 
   .cleanupOutputBeforeBuild()
   .enableBuildNotifications()

@@ -31,6 +31,9 @@ class KazetennCore extends AbstractBundle
         $admin_config[AdminMenu::MENU_AUTHORIZED_ROLES] = [KazetennUsers::ROLE_REDACTION];
 
         // tests for horizontal menus
+        t('kazetenn_admin.top_menu.platform_settings_button', [], 'kazetenn_admin');
+        t('kazetenn_admin.top_menu.account_button', [], 'kazetenn_admin');
+        t('kazetenn_admin.top_menu.logout_button', [], 'kazetenn_admin');
         $admin_config[AdminMenu::MENU_ENTRIES_NAME] = [
             'settings_menu' => [
                 AdminMenu::MENU_DISPLAY_NAME => 'kazetenn_admin.top_menu.platform_settings_button',
@@ -55,6 +58,8 @@ class KazetennCore extends AbstractBundle
 
         // general content handling (basic edition)
         t('kazetenn_admin.nav_size.main_menus', [], 'kazetenn_admin');
+        t('admin_menu.contents_link', [], 'kazetenn_admin');
+        t('admin_menu.content_handling_link', [], 'kazetenn_admin');
 
         $admin_config[AdminMenu::MENU_ENTRIES_NAME]['main_menu'] = [
             AdminMenu::MENU_DISPLAY_NAME => 'kazetenn_admin.nav_size.main_menus',

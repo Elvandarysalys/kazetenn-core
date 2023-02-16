@@ -1558,16 +1558,16 @@
         },
         {
             "name": "elvandar/kazetenn-admin",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Elvandarysalys/kazetenn-admin.git",
-                "reference": "ba24f0a1d93a4f2430b305b4dae0c369195299ac"
+                "reference": "8760dee8925b74d188bd8dd6da2dba66cbecfa28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-admin/zipball/ba24f0a1d93a4f2430b305b4dae0c369195299ac",
-                "reference": "ba24f0a1d93a4f2430b305b4dae0c369195299ac",
+                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-admin/zipball/8760dee8925b74d188bd8dd6da2dba66cbecfa28",
+                "reference": "8760dee8925b74d188bd8dd6da2dba66cbecfa28",
                 "shasum": ""
             },
             "require": {
@@ -1655,22 +1655,22 @@
             "description": "A symfon administration builder library built for the kazetenn project",
             "support": {
                 "issues": "https://github.com/Elvandarysalys/kazetenn-admin/issues",
-                "source": "https://github.com/Elvandarysalys/kazetenn-admin/tree/1.0.2"
+                "source": "https://github.com/Elvandarysalys/kazetenn-admin/tree/1.0.3"
             },
-            "time": "2023-02-16T10:06:37+00:00"
+            "time": "2023-02-16T15:12:26+00:00"
         },
         {
             "name": "elvandar/kazetenn-users",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Elvandarysalys/kazetenn-users.git",
-                "reference": "f48c825a2595d560e96e54df02dfe9baace5c955"
+                "reference": "8d5b54b377f3e587d08aae5e83fb14eac4bc2e94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-users/zipball/f48c825a2595d560e96e54df02dfe9baace5c955",
-                "reference": "f48c825a2595d560e96e54df02dfe9baace5c955",
+                "url": "https://api.github.com/repos/Elvandarysalys/kazetenn-users/zipball/8d5b54b377f3e587d08aae5e83fb14eac4bc2e94",
+                "reference": "8d5b54b377f3e587d08aae5e83fb14eac4bc2e94",
                 "shasum": ""
             },
             "require": {
@@ -1758,9 +1758,9 @@
             "description": "A symfony library to handle users in the kazetenn project",
             "support": {
                 "issues": "https://github.com/Elvandarysalys/kazetenn-users/issues",
-                "source": "https://github.com/Elvandarysalys/kazetenn-users/tree/1.0.4"
+                "source": "https://github.com/Elvandarysalys/kazetenn-users/tree/1.0.5"
             },
-            "time": "2023-02-16T10:30:45+00:00"
+            "time": "2023-02-16T11:00:24+00:00"
         },
         {
             "name": "friendsofphp/proxy-manager-lts",
